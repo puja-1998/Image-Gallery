@@ -1,38 +1,81 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: aliceblue;
+}
+
+.App-header{
+  height: 70px;
+  width: 100vw;
+  background-color: white;
+  box-shadow: 1px 1px 8px 2px gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: antiquewhite;
+}
+.logo, .github-logo{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+
+
+/* Styles for the Image Gallery */
+.image-gallery-container {
+  margin: 20px;
+  text-align: center;
+  background-image: linear-gradient(to left, pink, red, yellow);
+}
+
+.gallery-para {
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.image-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.gallery-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 30%);
+}
+
+/* Styles for the Selected Image */
+.selected-image {
+  margin-top: 40px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.selected-heading {
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.selected-img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
 }
